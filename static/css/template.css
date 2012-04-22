@@ -55,6 +55,7 @@ body {
 .bookcover {
     width: 240px;
     float: right;
+    padding-left: 15px;
 }
 
 .clearall {
