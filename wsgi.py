@@ -1,10 +1,10 @@
 import web
-#from reloader import PeriodicReloader
+from reloader import PeriodicReloader
 
 urls = ("/", "Index",
         "/([Pp]ractical-[Pp]ython)/?", "Ebook")
 
-application = web.application(urls, globals())
+app = web.application(urls, globals())
 render = web.template.render('templates/')
 
 class Index:
@@ -17,5 +17,8 @@ class Ebook:
                    
 
 if __name__ == "__main__":
-    #PeriodicReloader()
-    application.run()
+    PeriodicReloader()
+    app.run()
+else:
+    web.config.debug = False
+    application = app.wsgifunc()
