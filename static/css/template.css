@@ -1,0 +1,49 @@
+html {    
+    background-image: url('http://guide.couchdb.org/image/bg/base.png');
+    background-repeat: repeat;
+    background-color: #e6e6e6;
+}
+
+body {
+    font-family: Palatino, "Palatino Linotype", Georgia, Times, "Times New Roman", serif;
+}
+
+#title {
+    font-weight: normal;
+    font-size: 2.5em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 1px;
+}
+
+#subtitle {
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-left: 3px;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+#site {
+    width: 940px;
+    margin: 10px auto 0px auto;
+}
+
+.rounded {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.shadow {
+   -webkit-box-shadow: 1px 1px 3px 3px #ccc; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 1px 1px 3px 3px #ccc; /* FF3.5 - 3.6 */
+    box-shadow: 1px 1px 3px 3px #ccc; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
+
+}
+
+.content {
+    background-color: #fff;
+    padding: 15px 30px;
+}
