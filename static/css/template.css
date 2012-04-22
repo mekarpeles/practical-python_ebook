@@ -30,6 +30,10 @@ body {
     margin: 10px auto 0px auto;
 }
 
+#toc {
+    font-weight: normal;
+}
+
 .rounded {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -46,4 +50,13 @@ body {
 .content {
     background-color: #fff;
     padding: 15px 30px;
+}
+
+.bookcover {
+    width: 240px;
+    float: right;
+}
+
+.clearall {
+    clear: both;
 }
