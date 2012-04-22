@@ -1,5 +1,5 @@
 import web
-from reloader import PeriodicReloader
+#from reloader import PeriodicReloader
 
 urls = ("/", "Index",
         "/([Pp]ractical-[Pp]ython)/?", "Ebook")
@@ -17,5 +17,5 @@ class Ebook:
                    
 
 if __name__ == "__main__":
-    PeriodicReloader()
+    #PeriodicReloader()
     application.run()
