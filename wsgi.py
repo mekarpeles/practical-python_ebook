@@ -2,7 +2,8 @@ import web
 from reloader import PeriodicReloader
 
 urls = ("/", "Index",
-        "/([Pp]ractical-[Pp]ython)/?", "Ebook")
+        "/(.*)-chapter-([0-9]+)/?", "Chapter",
+        "/([Pp]ractical-[Pp]ython)/chapters/([0-9]+)/?", "Chapter")
 
 app = web.application(urls, globals())
 render = web.template.render('templates/')
@@ -11,10 +12,9 @@ class Index:
     def GET(self, book=None):
         return render.template()
 
-class Ebook:
-    def GET(self, title):
-        book = getattr(self, 'title', 'default').lower()
-                   
+class Chapter:
+    def GET(self, title, chapter=0):
+        return getattr(render.chapters, 'chapter_%s' % chapter, 'chapter_1')()
 
 if __name__ == "__main__":
     PeriodicReloader()
