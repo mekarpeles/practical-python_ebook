@@ -1,21 +1,185 @@
-<h1>Introduction</h1>
+$def with()
 
-<h2>For whom is this book intended?</h2>
-<p>
-  Hackers. Anyone can go online and read the Python API. This guide is
-  not intended to teach you Python but rather to share the lesser
-  known secrets about the Python programming language, help you better
-  master the language, and identify the strengths and weaknesses of
-  the language. Learn elegant solutions to common python problems, all
-  in one convenient place and with clear explanations. Discover
-  popular python modules for nearly any task, follow easy steps for
-  module installation and configuration, and browse through runnable
-  example code. The authors wrote this guide for advanced programmers
-  who are sick of looking through multiple sites to learn the best way
-  to accomplish common tasks in python.
+$var title: Introduction
+
+<p class="info">
+  This introduction is intended for people who are unsure whether they
+  can benefit from reading this
+  book. TLDR; <a href="/practical-python/chapters/2">skip to the
+  Table of Contents</a>.
 </p>
 
-<h2>Why use Python?</h2>
+<h2>For whom is this book written?</h2>
+<p>
+  <em>Python Hackers.</em> This guide is <em>not</em> intended to
+  teach you the basics of Python. Any seasoned programmer can quickly
+  pickup the fundamentals of the Python programming language by
+  referring to the
+  <a href="http://docs.python.org/">Official Python Documentation</a>.
+</p>
+
+<p>
+  Practical Python, Creative Commons (P2C2) is designed for hackers who
+  are unsatisfied just knowing the basics of a programming language.
+  This reference will teach you how to write <em>better</em> Python.
+</p>
+
+<p><strong>This means exploring:</strong></p>
+<ul>
+  <li>the code of excellent programmers</li>
+  <li>lesser known secrets of the language</li>
+  <li>elegant solutions to common problems</li>
+  <li>effective architecture and design patterns</li>
+  <li>how to maintain and test code</li>
+  <li>modules, packages, decorators</li>
+</ul>
+
+<h2>A Taste</h2>
+Here's a taste of some one liners you'll learn.
+
+<h3>A List of the Alphabet</h3>
+<pre>
+>>> import string
+>>> list(string.uppercase)
+['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+ 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+ 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+</pre>
+
+<h3>Floored Division</h3>
+<p>Using the // division operator will floor the results</p>
+<pre>
+>>> 6.5 // 3.0 
+2.0
+>>> 6.5 / 3.0
+2.1666666666666665
+</pre>
+
+<h3>Merging lists</h3>
+<pre>
+>>> range(0,10) + range(10,20)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+ 11, 12, 13, 14, 15, 16, 17, 18, 19]
+</pre>
+<h3>Default variables</h3>
+<p>When you are in a Python repl, you have access to a psuedo 'default variable' similar (but not equal) to the $$_ default variable from perl.</p>
+<pre>
+>>> 3*3
+9
+>>> _
+9
+</pre>
+
+
+<p><a href="http://stackoverflow.com/questions/4247626/python-default-variable-in-for-loop">Learn more...</a></p>
+
+<h2>Philosophy</h2>
+<p>
+  While it can be shown that turing complete languages can generally
+  accomplish mathematically equivalent tasks, it does not follow that
+  all programming languages are equal. Sure, you can build
+  Python from C, but that is very different from claiming Python is C.
+</p>
+
+<div class="quote">
+  <p>
+    "Any sufficiently complicated C or Fortran program contains an ad
+    hoc, informally-specified, bug-ridden, slow implementation of half
+    of Common Lisp [... including Common Lisp]"
+  </p>
+  <p>
+    -- Philip Greenspun [and Robert Morris]
+  </p>
+</div>
+
+<p>
+  It's important to recognize that every programming language has its
+  advantages and disadvantages. Becoming a great programmer depends on
+  acknologing this.
+</p>
+
+<p>To me, the philosophy of this book is embodied by a passage in one
+of Paul Graham's essays:</p>
+
+<div class="quote">
+  <p>
+    "Programmers get very attached to their favorite languages, and I
+    don't want to hurt anyone's feelings, so to explain this point I'm
+    going to use a hypothetical language called Blub. Blub falls right in
+    the middle of the abstractness continuum. It is not the most powerful
+    language, but it is more powerful than Cobol or machine language.
+  </p>
+
+  <p>
+    And in fact, our hypothetical Blub programmer wouldn't use either of
+    them. Of course he wouldn't program in machine language. That's what
+    compilers are for. And as for Cobol, he doesn't know how anyone can
+    get anything done with it. It doesn't even have x (Blub feature of
+    your choice).
+  </p>
+
+  <p>
+    As long as our hypothetical Blub programmer is looking down the
+    power continuum, he knows he's looking down. Languages less powerful
+    than Blub are obviously less powerful, because they're missing some
+    feature he's used to. But when our hypothetical Blub programmer
+    looks in the other direction, up the power continuum, he doesn't
+    realize he's looking up. What he sees are merely weird languages. He
+    probably considers them about equivalent in power to Blub, but with
+    all this other hairy stuff thrown in as well. Blub is good enough
+    for him, because he thinks in Blub.
+  </p>
+
+  <p>
+    When we switch to the point of view of a programmer using any of the
+    languages higher up the power continuum, however, we find that he in
+    turn looks down upon Blub. How can you get anything done in Blub? It
+    doesn't even have y.
+  </p>
+
+  <p>
+    By induction, the only programmers in a position to see all the
+    differences in power between the various languages are those who
+    understand the most powerful one. (This is probably what Eric
+    Raymond meant about Lisp making you a better programmer.) You can't
+    trust the opinions of the others, because of the Blub paradox:
+    they're satisfied with whatever language they happen to use, because
+    it dictates the way they think about programs."
+  </p>
+  <p>
+    <span>
+      --Paul Graham's,
+      "<a href="http://www.paulgraham.com/avg.html">Beating the Averages</a>"
+    </span>
+  </p>
+</div>
+
+<h2>What is P2C2</h2>
+<p>
+  P2C2 is a reference guide curated by Mek which attempts to raise
+  awareness about the most important elements of Python, all in one
+  convenient location and with clear explanations. It was written
+  because there does not yet exist a single resource for programmers who
+  are sick of looking through multiple sites to learn the best way to
+  accomplish common tasks in python.
+</p>
+
+<p>This guide would not be possible without great
+  examples/programmers such as
+  the <a href="http://www.pocoo.org/team/#armin-ronacher">Pocoo
+  Team</a>, <a href="http://stackoverflow.com/">Stackoverflow</a> and
+  it's wonderful contributors, as well as <a href="#">countless
+  others</a>. Together we will embark on a journey to become better at
+  Python.
+</p>
+
+<h2>Thanks</h2>
+<p>Thank you to Aaron Swartz, Zephyr Pellerin, Gavin Knight.</p>
+<h3>Aaron Swartz</h3>
+<p>Aaron is a personal role model of mine. This book was written over the webpy framework.</p>
+
+
+<h2>About Python</h2>
 <p>
   Python is a dynamically typed, multi-paradigm, interpreted language
   with a REPL (read, evaluate, print, loop) for rapid
@@ -23,14 +187,18 @@
   different problem solving techniques and approached (such as an
   object oriented, functional, or imperative approach). Python’s
   dynamic typing allows for automatic interpretation and resolution of
-  data types so variables do not have to be explicitly typed. Overall,
-  these features make Python easy for getting started without limiting
-  a programmer’s ability to be expressive. While these features do
-  make Python a rapid development environment, it does come at a
-  cost. Interpretation demands additional computation at run time
-  (versus most compiled languages where typing is traditionally
+  data types so variables do not have to be explicitly typed.
+</p>
+
+<p>
+  Overall, these features make Python easy for getting started without
+  limiting a programmer’s ability to be expressive. While these
+  features do make Python a rapid development environment, it does
+  come at a cost. Interpretation demands additional computation at run
+  time (versus most compiled languages where typing is traditionally
   performed at compiled time).  For example, the following figure
   shows the run time speed of Python 3 versus Java 6-server on a
-  variety of tests. [Information gathered from:
-  http://shootout.alioth.debian.org/u64/python3.php]
+  variety of
+  tests. [<a href="http://shootout.alioth.debian.org/u64/python3.php">http://shootout.alioth.debian.org/u64/python3.php</a>]
 </p>
+

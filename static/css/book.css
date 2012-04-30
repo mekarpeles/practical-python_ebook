@@ -1,0 +1,73 @@
+body {
+    font-family: Palatino, "Palatino Linotype", Georgia, Times, "Times New Roman", serif;
+}
+
+#book {
+    width: 960px;
+    margin: 10px auto 0px auto;
+}
+
+#nav {
+    font-size: .9em;
+    position: absolute;
+    display: inline;
+    margin-left: -200px;
+}
+
+#nav>ul {
+    /*list-style-type: none;*/
+}
+
+.chapter {
+    margin-left: 20px;
+}
+
+h2 {
+    font-weight: normal;
+    margin-top: 0px;
+}
+
+.page {
+    border: 1px solid #eee;
+    -moz-column-count: 2;
+    -moz-column-gap: 40px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+    column-count: 2;
+    column-gap: 40px;
+    padding: 20px 20px;
+    z-index: 999;
+}
+
+hr {
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    height: 1px;
+    border: none;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.turn-page {
+    background-image: url(/static/imgs/turn-page.jpg); 
+    background-repeat: no-repeat;
+    position: relative;
+    height: 102px;
+    margin-top: -74px;
+    margin-left: 867px;
+    z-index: 0;
+}
+
+.quote {
+    border-left: 4px solid #def;
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+.info {
+    background-color: #ff6;
+    padding: 15px;
+    border: 1px solid #ff4;
+}

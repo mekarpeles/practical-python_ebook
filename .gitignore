@@ -3,6 +3,7 @@
 *~
 
 db.cfg
+
 # Packages
 *.egg
 *.egg-info

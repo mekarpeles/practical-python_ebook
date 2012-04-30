@@ -1,17 +1,18 @@
-$def with()
+$def with(title, subtitle="",version="", description="", keywords="")
 
 <html>
   <head>
-    <title>Practical Python</title>
+    <title>$title</title>
     <meta name="description" content="By Mek; Hyperink 2012, ISBN 9781614642411. Practical Python is the fastest way to learn python tricks." />
-    <meta name="keywords" content="Python,Practical Python,programming,hacks,learning"/>
+    <meta name="keywords" content="$keywords"/>
+    <link rel="stylesheet" href="/static/css/shared.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="/static/css/template.css" type="text/css" media="all"/>
   </head>
 
   <body>    
     <div id="site">
-      <h1 id="title">Practical Python</h1>
-      <h2 id="subtitle">A Guide to Better Python</h2>
+      <h1 id="title">$title</h1>
+      <h2 id="subtitle">$subtitle</h2>
       <div class="content shadow rounded">
 	<p>
 	  <div>
@@ -25,6 +26,7 @@ $def with()
 	      it on github</a>!
 	    </p>
 
+	    <!-- TOC should be included and rendered using the render object in globals -->
 	    <h3 id="toc">Table of Contents</h3>
 	    <ol>
 	      <li><a href="/practical-python/chapters/1">Introduction</a></li>

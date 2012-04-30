@@ -34,19 +34,6 @@ body {
     font-weight: normal;
 }
 
-.rounded {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-
-.shadow {
-   -webkit-box-shadow: 1px 1px 3px 3px #ccc; /* Saf3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow: 1px 1px 3px 3px #ccc; /* FF3.5 - 3.6 */
-    box-shadow: 1px 1px 3px 3px #ccc; /* Opera 10.5, IE9, FF4+, Chrome 6+, iOS 5 */
-
-}
-
 .content {
     background-color: #fff;
     padding: 15px 30px;
