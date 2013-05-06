@@ -1,0 +1,51 @@
+$def with(title, subtitle="",version="", description="", keywords="")
+
+<html>
+  <head>
+    <title>$title</title>
+    <meta name="description" content="By Mek; Hyperink 2012, ISBN 9781614642411. Practical Python is the fastest way to learn python tricks." />
+    <meta name="keywords" content="$keywords"/>
+    <link rel="stylesheet" href="/static/css/shared.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="/static/css/template.css" type="text/css" media="all"/>
+  </head>
+
+  <body>    
+    <div id="site">
+      <h1 id="title">$title</h1>
+      <h2 id="subtitle">$subtitle</h2>
+      <div class="content shadow rounded">
+	<p>
+	  <div>
+	    <img class="bookcover" src="/static/imgs/practical-python.png" alt="Practical Python Bookcover"/>
+	    <p>
+	      This primer intends to improve one's Py-foo by
+	      presenting patterns, strategies, techniques, and best
+	      practice for solving every day problems, efficiently, in
+	      Python. Please help me improve this book
+	      and <a href="https://github.com/mekarpeles/practical-python_ebook">fork
+	      it on github</a>!
+	    </p>
+
+	    <!-- TOC should be included and rendered using the render object in globals -->
+	    <h3 id="toc">Table of Contents</h3>
+	    <ol>
+	      <li><a href="/practical-python/chapters/1">Introduction</a></li>
+	      <li><a href="/practical-python/chapters/2">Python Built-ins</a></li>
+	      <li><a href="/practical-python/chapters/3">Uncommon Operators</a></li>
+	      <li><a href="/practical-python/chapters/4">“Strings”</a></li>
+	      <li><a href="/practical-python/chapters/5">String Formatting Fun with Dictionaries</a></li>
+	      <li><a href="/practical-python/chapters/6">{Sets} and {“Python” : “Dictionaries”}</a></li>
+	      <li><a href="/practical-python/chapters/7">[“Python”, “Lists”]</a></li>
+	      <li><a href="/practical-python/chapters/8">Extras, Fun, and Easter Eggs</a></li>
+	      <li><a href="/practical-python/chapters/9">Coming Soon: (Sample)</a></li>
+	      <li><a href="/practical-python/chapters/10">Supplemental Resources and Modules for Any Occasion</a></li>
+	    </ol>
+	  </div>
+	  <div class="clearall">
+	  </div>
+	</p>
+      </div>
+    </div>
+  </body>
+
+</html>
