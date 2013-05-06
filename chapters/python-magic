@@ -45,7 +45,10 @@ expertise of the source code).
   Further reading: http://stackoverflow.com/questions/3061/calling-a-function-from-a-string-with-the-functions-name-in-python?rq=1
 
   What NOT to do:
-  * Don't use eval or exec, if you can help it. (http://stackoverflow.com/questions/1087255/use-of-eval-in-python)  
+  * Don't use eval or exec, if you can help it.
+  - http://stackoverflow.com/questions/1087255/use-of-eval-in-python
+  - http://www.floyd.ch/?p=584
+
 
   1) Using locals() or vars()
 
