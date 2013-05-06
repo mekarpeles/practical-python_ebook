@@ -1,0 +1,79 @@
+
+Python Programmable Programming
+===============================
+
+Under the Hood
+--------------
+
+Python provides several unique ways of introspecting and exploiting
+your programs at runtime for increased flexibility.
+
+The Players
+-----------
+
+* Interesting homoiconicty and reflection via eval and exec
+
+Example: A python optimizer which does taint analysis to eliminate
+untouched / unreferenced variables within a scope. Also, the tool
+could reads your code as input and programatically tests reorderings
+of import statements. This could alternatively be done with parsing
+and use of the __import__ function (but this would require domain
+expertise of the source code).
+
+* globals, locals, vars, dir, inspect
+
+  vars vs. globals vs locals(): http://stackoverflow.com/questions/7969949/whats-the-difference-between-globals-locals-and-vars
+  locals(): http://www.diveintopython.net/html_processing/locals_and_globals.html#d0e21119
+  dir(): http://docs.python.org/release/1.5.1p1/tut/dir.html
+
+* Dynamically import packages by string
+
+  Dynamically import / load a module:
+  Refer to Docs: http://docs.python.org/2/library/functions.html#__import__
+
+  >>> time = __import__('time', globals(), locals(), [], -1)
+  >>> time.time()
+  1367831710.66535
+
+* Dynamically retrieve a reference to a function by string name
+
+  This can be done via vars() or locals()
+
+  Access functions within your namespace with string values (or, use
+  string values to call the appropriate function:
+
+  Further reading: http://stackoverflow.com/questions/3061/calling-a-function-from-a-string-with-the-functions-name-in-python?rq=1
+
+  What NOT to do:
+  * Don't use eval or exec, if you can help it. (http://stackoverflow.com/questions/1087255/use-of-eval-in-python)  
+
+  1) Using locals() or vars()
+
+  Example:
+
+  >>> def foo():
+  ...     print("bar")
+  ...     
+  >>> locals()['foo']
+  <function __main__.foo>
+  >>> locals()['foo']()
+  bar
+
+  2) Using getattr
+
+* Programmatially access a list of variables and or methods available within your current scope/namespace via Introspect 
+
+  >>> def foo():
+  ...    x = 3
+  ...    print 'x' in dir()
+  ...    print locals()['x']
+  ...
+  >>> def foo():
+  ...    x = 3
+  ...    print locals()['x']
+  ...       
+  >>> foo()
+  True
+  3
+
+
