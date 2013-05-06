@@ -1,0 +1,34 @@
+http://www.clemesha.org/blog/modern-python-hacker-tools-virtualenv-fabric-pip/
+
+Package Management
+------------------
+
+pip, easy_install
+
+Deployment
+----------
+
+Fabric - http://docs.fabfile.org/en/1.6/
+
+Environment Management
+----------------------
+
+http://www.pythonforbeginners.com/basics/how-to-use-python-virtualenv/
+
+Version Control
+---------------
+
+git, hg, bazaar
+
+Logging
+-------
+
+https://sentry.readthedocs.org/en/latest/index.html
+
+Profiling
+---------
+
+cProfile
+Plop (by Dropbox) https://tech.dropbox.com/2012/07/plop-low-overhead-profiling-for-python/ @ https://github.com/bdarnell/plop
+
+http://docs.python.org/2/library/profile.html
