@@ -1,7 +1,6 @@
-practical-python_ebook
-======================
+# P2C2
 
-<h1>Practical Python</h1>
+## Practical Python Creative Commons
 
 <p><em>Practical Python</em> is published by Hyperink under a <a href="http://creativecommons.org/licenses/by/3.0/">free license</a></p>
 
